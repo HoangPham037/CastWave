@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/_16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:layout_marginStart="-10dp"
+            android:src="@drawable/ic_back_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_sign_up"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivClose" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="@string/txt_content_sign_up"
+            android:textColor="@color/purple_03"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <EditText
+            android:id="@+id/edtGmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_100dp"
+            android:background="@drawable/bg_radius_8dp_purple_01"
+            android:backgroundTint="#433C63"
+            android:fontFamily="@font/plus_jakarta_sans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/txt_enter_gmail"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey_04"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            tools:ignore="Autofill,UseCompatTextViewDrawableXml" />
+
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50dp"
+            android:background="@drawable/bg_radius_8dp_purple_01"
+            android:gravity="center"
+            android:padding="@dimen/_16dp"
+            android:text="@string/txt_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtGmail" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/viewOne"
+                android:layout_width="0dp"
+                android:layout_height="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_view"
+                android:rotation="180" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_8dp"
+                android:text="@string/txt_or"
+                android:textColor="@color/purple_02"
+                android:textSize="@dimen/_12sp" />
+
+            <View
+                android:id="@+id/viewTwo"
+                android:layout_width="0dp"
+                android:layout_height="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_view" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20dp"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_email"
+                android:padding="@dimen/_10dp"
+                android:src="@drawable/ic_facebook" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25dp"
+                android:background="@drawable/bg_email"
+                android:padding="@dimen/_10dp"
+                android:src="@drawable/ic_google" />
+        </TableRow>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginVertical="@dimen/_30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/txt_account" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_layout"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvRule" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_8dp"
+                android:id="@+id/tvRule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_35dp"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvSignIn"
+                app:layout_constraintStart_toStartOf="@+id/tvSignIn"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignIn"
+                tools:text="@string/txt_rule" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

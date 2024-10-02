@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutItem">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/bgr_item_pod_course"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgPodCourse"
+            android:layout_width="228dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_test"
+            app:layout_constraintDimensionRatio="228:279"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="16dp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icPlayPodcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_play_48"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPodCourse"
+            app:layout_constraintEnd_toEndOf="@+id/imgPodCourse" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icPlayPodCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_play_blur"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPodCourse"
+            app:layout_constraintEnd_toEndOf="@+id/imgPodCourse"
+            app:layout_constraintStart_toStartOf="@+id/imgPodCourse"
+            app:layout_constraintTop_toTopOf="@+id/imgPodCourse" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:textColor="@color/white"
+            app:drawableStartCompat="@drawable/ic_rate_star"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPodCourse"
+            tools:text="4.7" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRate"
+            app:layout_constraintEnd_toStartOf="@+id/tvRate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRate">
+
+            <TextView
+                android:id="@+id/tvPodCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_podcourse"
+                android:text="@string/podcourse" />
+
+            <TextView
+                android:id="@+id/tvTitlePodCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:text="Khinh nghiệm vàng để khởi nghiệp nhà hàng" />
+
+            <TextView
+                android:id="@+id/tvNameAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="Lý Quý Trung" />
+
+            <TextView
+                android:id="@+id/tvNewBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_new_book"
+                tools:text="Sách nói mới" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_marginEnd="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:background="@drawable/ic_rank_1"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

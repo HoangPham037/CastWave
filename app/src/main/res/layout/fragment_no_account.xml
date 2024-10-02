@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:paddingHorizontal="@dimen/_32dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:layout_gravity="start"
+        android:elevation="@dimen/_5dp"
+        android:padding="@dimen/_5dp"
+        android:src="@drawable/ic_back_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_150dp"
+        android:src="@drawable/ic_account"
+        tools:ignore="ContentDescription" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_title"
+        android:textColor="@color/purple_01"
+        android:textSize="@dimen/_18sp"
+        />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/txt_content_account"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp"
+       />
+
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_80dp"
+        android:background="@drawable/bgr_info_user_doscovery"
+        android:drawableEnd="@drawable/ic_next"
+        android:gravity="center_vertical"
+        android:paddingVertical="@dimen/_12dp"
+        android:paddingStart="@dimen/_32dp"
+        android:paddingEnd="@dimen/_10dp"
+        android:text="@string/txt_login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        tools:ignore="RtlSymmetry" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:paddingHorizontal="@dimen/_40dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_sign_up"
+        android:textColor="@color/purple_01"
+        android:textSize="@dimen/_15sp"
+       />
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bgr_item_pod_course"
+    android:padding="8dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="6dp"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgPodCourse"
+        android:layout_width="106dp"
+        android:layout_height="156dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,106:156"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8dp" />
+
+    <TextView
+        android:id="@+id/tvTypePrice"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_package"
+        android:padding="4dp"
+        android:text="Miễn phí"
+        android:textColor="#99D24D"
+        app:layout_constraintEnd_toEndOf="@+id/imgPodCourse"
+        app:layout_constraintTop_toTopOf="@+id/imgPodCourse" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

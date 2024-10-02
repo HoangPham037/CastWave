@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_16dp">
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_play_popup"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_start_listen"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_info_popup"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_book_info"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_favourite_popup"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_favourite"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+</LinearLayout>

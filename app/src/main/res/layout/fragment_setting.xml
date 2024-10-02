@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_16dp">
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@drawable/bgr_info_user_doscovery"
+        android:backgroundTint="#802A2849"
+        android:drawableStart="@drawable/ic_back_setting"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center"
+        android:paddingStart="@dimen/_5dp"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingEnd="@dimen/_15dp"
+        android:paddingBottom="@dimen/_4dp"
+        android:text="@string/txt_setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBack"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/iv_avatar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_01"
+                android:textSize="@dimen/_18sp"
+                tools:text="Chiếc Lá Khô" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_12sp"
+                tools:text="ID: 012345" />
+        </LinearLayout>
+    </TableRow>
+
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25dp"
+        android:drawableStart="@drawable/ic_download"
+        android:drawableEnd="@drawable/ic_continue"
+        android:drawablePadding="@dimen/_15dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_setting_download"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvQrCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:drawableStart="@drawable/ic_qr_code"
+        android:drawableEnd="@drawable/ic_continue"
+        android:drawablePadding="@dimen/_15dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_qr_code"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvVipCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:drawableStart="@drawable/ic_vip_card"
+        android:drawableEnd="@drawable/ic_continue"
+        android:drawablePadding="@dimen/_15dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_vip_card"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp"/>
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:drawableStart="@drawable/ic_information"
+        android:drawableEnd="@drawable/ic_continue"
+        android:drawablePadding="@dimen/_15dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_information"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp"/>
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvRuleAndSecurity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:drawableStart="@drawable/ic_rule"
+        android:drawableEnd="@drawable/ic_continue"
+        android:drawablePadding="@dimen/_15dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_setting_rule_and_security"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:drawableStart="@drawable/ic_log_out"
+        android:drawablePadding="@dimen/_15dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_log_out"
+        android:textColor="@color/purple_01"
+        android:textSize="@dimen/_16sp" />
+</LinearLayout>

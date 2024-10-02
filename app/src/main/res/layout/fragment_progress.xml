@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_16dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100dp"
+        android:background="@drawable/bg_radius_8dp_purple_01"
+        android:backgroundTint="@color/grey_02"
+        android:padding="@dimen/_16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_updating"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_18sp" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:lineSpacingExtra="@dimen/_5dp"
+                android:text="@string/txt_content"
+                android:textColor="@color/grey_04" />
+        </LinearLayout>
+
+        <com.castwave.castwave.customview.CustomCircleProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_100dp" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProgress"
+        android:layout_width="@dimen/_240dp"
+        android:layout_height="@dimen/_240dp"
+        android:layout_gravity="center"
+        android:src="@drawable/iv_progress_set_up" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

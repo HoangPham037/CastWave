@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintListeningLevel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_32dp"
+    android:layout_marginTop="@dimen/_10dp"
+    android:background="@drawable/bg_radius_16dp"
+    android:padding="@dimen/_16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvListeningLevel">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvLevelBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:text="LEVEL 2"
+        android:textColor="@color/grey_02"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivLevel"
+        app:layout_constraintEnd_toEndOf="@id/ivLevel"
+        app:layout_constraintStart_toStartOf="@id/ivLevel" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvNameBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:text="Bronze cup"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLevelBadge" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:gravity="center"
+        android:text="Hoàn thành 15 nhiệm vụ "
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNameBadge" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginEnd="@dimen/_4dp"
+        android:progress="10"
+        android:progressDrawable="@drawable/custom_progressbar"
+        app:layout_constraintEnd_toStartOf="@id/tvRatio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvRatio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/10"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvSeeRewards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:background="@drawable/bg_radius_40dp"
+        android:backgroundTint="@color/grey_01"
+        android:drawableEnd="@drawable/ic_next"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10dp"
+        android:paddingStart="@dimen/_16dp"
+        android:text="@string/txt_see_rewards"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        tools:ignore="RtlSymmetry" />
+</androidx.constraintlayout.widget.ConstraintLayout>

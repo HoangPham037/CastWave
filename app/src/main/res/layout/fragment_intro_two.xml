@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/txt_please_infrom"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="@string/txt_notifycation_content"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp"/>
+
+    <View
+        android:layout_width="@dimen/_16dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/iv_monitor" />
+
+    <View
+        android:layout_width="@dimen/_16dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/btnOpenNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12dp"
+        android:background="@drawable/bg_radius_8dp_purple_01"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:text="@string/txt_open_notification"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvLater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_25dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_20dp"
+        android:paddingVertical="@dimen/_16dp"
+        android:text="@string/txt_later"
+        android:textColor="@color/green_02"
+        android:textSize="@dimen/_15sp" />
+</LinearLayout>

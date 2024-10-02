@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8dp"
+    app:cardCornerRadius="@dimen/_12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_02"
+        android:padding="8dp">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView"
+            android:layout_width="76dp"
+            android:layout_height="@dimen/_0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_test"
+            app:layout_constraintDimensionRatio="76:109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round="@dimen/_8dp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminateOnly="false"
+            android:progress="50"
+            android:progressDrawable="@drawable/circle_shape_correct"
+            android:rotation="270"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_12"
+            app:layout_constraintBottom_toBottomOf="@+id/progress"
+            app:layout_constraintEnd_toEndOf="@+id/progress"
+            app:layout_constraintStart_toStartOf="@+id/progress"
+            app:layout_constraintTop_toTopOf="@+id/progress" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvNameCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7dp"
+            android:textColor="@color/purple_03"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            tools:text="PODCOURSE" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvTitle"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_4dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFilterView"
+            app:layout_constraintEnd_toStartOf="@+id/progress"
+            app:layout_constraintStart_toEndOf="@+id/imageFilterView"
+            app:layout_constraintTop_toTopOf="@+id/imageFilterView"
+            tools:text="Sapiens: Luoc su loai nguoi hihiihiii psdfjpsjspdfj" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

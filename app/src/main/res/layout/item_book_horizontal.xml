@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8dp"
+    android:layout_marginEnd="@dimen/_8dp"
+    android:background="@drawable/bgr_item_pod_course"
+    android:padding="8dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgPodCourse"
+        android:layout_width="76dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H, 76: 109"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8dp" />
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgMore"
+        app:layout_constraintStart_toEndOf="@+id/imgPodCourse"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:layout_marginStart="@dimen/_8dp"
+            android:id="@+id/tvTypePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green_02"
+            tools:text="MIEN PHI" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvNameBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgPodCourse"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Milk and honey Milk and honey Milk Milk and honey Milk and honey Milk..." />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:layout_marginStart="@dimen/_8dp"
+            android:id="@+id/tvNameAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/tvNameBook"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameBook"
+            tools:text="Michael Field" />
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

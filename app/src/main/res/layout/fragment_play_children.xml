@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#801C1C37"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:padding="@dimen/_5dp"
+        android:src="@drawable/ic_back_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/ivCover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_40dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_cover"
+        app:layout_constraintBottom_toTopOf="@id/tvName"
+        app:layout_constraintDimensionRatio="W , 1 : 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"
+        app:round="@dimen/_16dp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_theme"
+        android:drawablePadding="@dimen/_8dp"
+        android:padding="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="@id/ivCover"
+        app:layout_constraintTop_toBottomOf="@id/ivCover"
+        android:text="@string/txt_timer" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_marginTop="@dimen/_10dp"
+        android:singleLine="true"
+        android:text="Thiền trong thiên nhiên"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTimer"
+        app:layout_constraintBottom_toTopOf="@id/tvTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:text="48 phút"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintBottom_toTopOf="@id/seekbar"
+        app:layout_constraintStart_toStartOf="@id/tvName" />
+
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_40dp"
+        android:maxHeight="@dimen/_5dp"
+        android:progressDrawable="@drawable/seekbar_progress_style"
+        android:thumb="@drawable/seekbar_thumb_shape"
+        android:thumbOffset="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tvTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        tools:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/seekbar" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvTimeTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        tools:text="03:45"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCurrentTime" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_play_gradient"
+        android:padding="@dimen/_15dp"
+        android:src="@drawable/ic_level_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

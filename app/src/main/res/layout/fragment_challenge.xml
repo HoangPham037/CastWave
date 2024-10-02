@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01">
+
+    <TableRow
+        android:id="@+id/tbActionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_01"
+        android:elevation="@dimen/_5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:paddingTop="@dimen/_50dp"
+        android:paddingBottom="@dimen/_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvTitleChallenge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txt_challenge"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:padding="@dimen/_10dp"
+            android:src="@drawable/ic_store_no_bgr" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_oval_grey2"
+            android:src="@drawable/img_test" />
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbActionbar"
+        tools:ignore="UselessLeaf">
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_title_challenge"
+            android:textColor="@color/grey_04"
+            android:textSize="@dimen/_20sp" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_50dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:gravity="center"
+            android:text="@string/txt_content_challenge"
+            android:textColor="@color/grey_04"
+            android:textSize="@dimen/_15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/iv_challenge" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvJonNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50dp"
+            android:layout_marginBottom="@dimen/_110dp"
+            android:background="@drawable/bg_radius_8dp_purple_01"
+            android:gravity="center"
+            android:padding="@dimen/_16dp"
+            android:text="@string/txt_jon_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otpView" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbActionbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutNoChallenge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_16dp">
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvLevelBadge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:drawableEnd="@drawable/ic_next"
+                android:gravity="center_vertical"
+                android:text="HUY HIỆU (0)"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/itemBadge"
+                layout="@layout/item_badge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLevelBadge" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvTodayMission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:gravity="center_vertical"
+                android:text="@string/txt_today_mission"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemBadge" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green_02"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvTodayMission"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTodayMission"
+                tools:text="Còn 7 giờ" />
+
+            <LinearLayout
+                android:id="@+id/lnTatolDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/bg_radius_16dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTodayMission">
+
+                <com.castwave.castwave.customview.TextCastWaveRegular
+                    android:id="@+id/tvTotalDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:lineSpacingExtra="@dimen/_5dp"
+                    android:text="Truy cập vào CastWave 03 ngày liên tiếp"
+                    android:textColor="@color/grey_04"
+                    android:textSize="@dimen/_15sp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:gravity="bottom">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarDay"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_12dp"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="1"
+                        android:progress="10"
+                        android:progressDrawable="@drawable/custom_progressbar"
+                        app:layout_constraintEnd_toStartOf="@id/tvRatio"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+                    <com.castwave.castwave.customview.TextCastWaveBold
+                        android:id="@+id/tvRatioDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0/10"
+                        android:textColor="@color/grey_04"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </TableRow>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/bg_radius_16dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lnTatolDay">
+
+                <com.castwave.castwave.customview.TextCastWaveRegular
+                    android:id="@+id/tvTotalTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:lineSpacingExtra="@dimen/_5dp"
+                    android:text="Nghe CastWave 5 phút"
+                    android:textColor="@color/grey_04"
+                    android:textSize="@dimen/_15sp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:gravity="bottom">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarTime"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_12dp"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="1"
+                        android:progress="10"
+                        android:progressDrawable="@drawable/custom_progressbar"
+                        app:layout_constraintEnd_toStartOf="@id/tvRatio"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+                    <com.castwave.castwave.customview.TextCastWaveBold
+                        android:id="@+id/tvRatioTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0/10"
+                        android:textColor="@color/grey_04"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </TableRow>
+
+                <com.castwave.castwave.customview.TextCastWaveBold
+                    android:id="@+id/tvSeeRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:background="@drawable/bg_radius_40dp"
+                    android:backgroundTint="@color/grey_01"
+                    android:drawableEnd="@drawable/ic_next"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_10dp"
+                    android:paddingStart="@dimen/_16dp"
+                    android:text="@string/txt_see_rewards"
+                    android:textColor="@color/grey_04"
+                    android:textSize="@dimen/_15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/progressBar"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvListeningLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:drawableEnd="@drawable/ic_next"
+                android:gravity="center_vertical"
+                android:text="@string/txt_listening_level"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lnTime" />
+
+            <include
+                android:id="@+id/itemListeningLevel"
+                layout="@layout/item_badge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_120dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvListeningLevel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

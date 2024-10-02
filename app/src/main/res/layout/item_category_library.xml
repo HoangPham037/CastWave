@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.castwave.castwave.customview.TextCastWaveBold xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4dp"
+    android:background="@drawable/bgr_item_un_select"
+    android:drawableEnd="@drawable/ic_all"
+    android:drawablePadding="@dimen/_4dp"
+    android:paddingHorizontal="@dimen/_12dp"
+    android:paddingVertical="@dimen/_8dp"
+    android:textColor="@color/white"
+    tools:text="Tat ca" />

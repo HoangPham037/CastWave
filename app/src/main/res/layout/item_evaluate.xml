@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_16dp"
+    android:background="@drawable/bg_radius_12"
+    android:padding="@dimen/_16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toTopOf="@id/tvTime"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar"
+        tools:text="Chiếc Lá Khô" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_03"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="24/7/2024" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvTotalLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar"
+        tools:text="10" />
+
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5dp"
+        android:src="@drawable/iv_level_like"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+        app:layout_constraintEnd_toStartOf="@id/tvTotalLike"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar"
+        tools:ignore="ContentDescription" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="@string/txt_content_evaluate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toStartOf="@id/ivAvatar"
+        app:layout_constraintTop_toBottomOf="@id/ivAvatar" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingBarContent"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40dp"
+        android:isIndicator="true"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@id/tvContent"
+        app:layout_constraintStart_toEndOf="@id/tvContent"
+        app:layout_constraintTop_toTopOf="@id/tvContent"
+        tools:rating="2" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvReadingVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/txt_reading_voice"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toStartOf="@id/tvContent"
+        app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingBarVoice"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@id/tvReadingVoice"
+        app:layout_constraintStart_toStartOf="@id/ratingBarContent"
+        app:layout_constraintTop_toTopOf="@id/tvReadingVoice"
+        tools:rating="4.7" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvContentEvaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:lineSpacingExtra="@dimen/_5dp"
+        android:text="Hoàng tử bé được coi là một trong những tác phẩm văn học thơ mộng, ngây thơ và trong sáng nhất mọi thời đại."
+        android:textColor="@color/grey_03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReadingVoice" />
+</androidx.constraintlayout.widget.ConstraintLayout>

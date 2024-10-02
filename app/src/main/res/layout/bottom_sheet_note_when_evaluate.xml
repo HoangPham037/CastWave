@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp"
+    android:background="@drawable/bg_radius_top_12dp">
+    <View
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_4dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/_12dp"
+        android:background="@drawable/bg_radius_16dp" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/txt_note_when_evaluating"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:lineSpacingExtra="@dimen/_5dp"
+        android:text="@string/txt_content_note_evaluate"
+        android:textColor="@color/white" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvUnderstood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_8dp_purple_01"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_40dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/txt_understood"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutEvaluate"
+    android:background="@drawable/bg_radius_12"
+    android:padding="@dimen/_8dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/ivCoverPhoto"
+        android:layout_width="@dimen/_76dp"
+        android:layout_height="@dimen/_109dp"
+        android:scaleType="centerCrop"
+        app:round="@dimen/_8dp"
+        android:src="@drawable/img_test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H , 76 : 109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvRatioContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_6dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toTopOf="@id/tvContentEvaluate"
+        app:layout_constraintStart_toEndOf="@id/ivCoverPhoto"
+        tools:text="4.7" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBarContent"
+        android:isIndicator="true"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@id/tvRatioContent"
+        app:layout_constraintStart_toEndOf="@id/tvRatioContent"
+        app:layout_constraintTop_toTopOf="@id/tvRatioContent"
+        tools:rating="4.7" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvContentEvaluate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_6dp"
+        android:text="@string/txt_content_evaluate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp"
+        android:paddingVertical="@dimen/_3dp"
+        app:layout_constraintStart_toStartOf="@id/tvRatioContent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_25dp"/>
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvRatioReadingVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_6dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toStartOf="@id/tvContentEvaluate"
+        app:layout_constraintTop_toBottomOf="@id/tvContentEvaluate"
+        tools:text="5.0" />
+    <androidx.appcompat.widget.AppCompatRatingBar
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/yellow"
+        android:isIndicator="true"
+        app:layout_constraintBottom_toBottomOf="@id/tvRatioReadingVoice"
+        app:layout_constraintStart_toEndOf="@id/tvRatioReadingVoice"
+        app:layout_constraintTop_toTopOf="@id/tvRatioReadingVoice"
+        tools:rating="5" />
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvReadingVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2dp"
+        android:paddingHorizontal="@dimen/_6dp"
+        android:text="@string/txt_reading_voice"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintStart_toStartOf="@id/tvRatioReadingVoice"
+        app:layout_constraintTop_toBottomOf="@id/tvRatioReadingVoice" />
+</androidx.constraintlayout.widget.ConstraintLayout>

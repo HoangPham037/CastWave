@@ -1,0 +1,87 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bgr_bottom_nav"
+    android:padding="@dimen/_4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="@dimen/_0dp"
+            android:id="@+id/tvLibrary"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_library"
+            android:gravity="center"
+            android:text="@string/txt_library"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="@dimen/_0dp"
+            android:id="@+id/tvPodCourse"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_pod_course"
+            android:gravity="center"
+            android:text="@string/txt_pod_course"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:layout_width="@dimen/_0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:layout_width="wrap_content"
+                android:id="@+id/tvDiscover"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bgr_discover"
+                android:padding="@dimen/_12dp"
+                android:textScaleX="0"
+                android:drawableTop="@drawable/ic_discover" />
+        </FrameLayout>
+
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="@dimen/_0dp"
+            android:id="@+id/tvSearch"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_search"
+            android:gravity="center"
+            android:text="@string/txt_search"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvChallenge"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_challenge"
+            android:gravity="center"
+            android:text="@string/txt_challenge"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

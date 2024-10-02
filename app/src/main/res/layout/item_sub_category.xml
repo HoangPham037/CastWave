@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_12dp"
+    android:orientation="vertical">
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_12"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:id="@+id/tvName"
+        android:paddingVertical="@dimen/_18dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        tools:text="Tâm lý học tội phạm" />
+</LinearLayout>

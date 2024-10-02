@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_podcast"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/_46dp"
+            android:layout_height="@dimen/_46dp"
+            android:src="@drawable/img_test"
+            app:riv_corner_radius="100dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:src="@drawable/ic_store" />
+    </LinearLayout>
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="wrap_content"
+            android:text="@string/txt_select_category"
+            android:textSize="@dimen/_18sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:id="@+id/tvSelectCategory"
+            android:drawablePadding="@dimen/_8dp"
+            android:layout_marginStart="@dimen/_10dp"
+            android:padding="@dimen/_16dp"
+            android:background="@drawable/bg_width_1_radius_16dp"
+            android:drawableEnd="@drawable/ic_show_category"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPodCast"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_discovery_new_hot" />
+
+
+</LinearLayout>

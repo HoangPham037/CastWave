@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background_sign_in"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp">
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_130dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_25dp"
+        android:text="@string/txt_content_sign_in"
+        android:textColor="@color/purple_03"
+        android:textSize="@dimen/_15sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15dp"
+        android:background="@drawable/bg_radius_8dp_purple_01"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:text="@string/txt_sign_in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:background="@drawable/bg_sign_up"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="@dimen/_16dp"
+        android:text="@string/txt_sign_up"
+        android:textColor="@color/purple_01"
+        android:textSize="@dimen/_15sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvContinueGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:paddingHorizontal="@dimen/_20dp"
+        android:paddingVertical="@dimen/_5dp"
+        android:text="@string/txt_continue_guest"
+        android:textColor="@color/green_02"
+        android:textSize="@dimen/_15sp" />
+
+
+</LinearLayout>

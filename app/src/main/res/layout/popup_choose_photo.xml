@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup_choose_photo"
+    android:orientation="vertical">
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_camera"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_30dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_camera"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_library"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_30dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_library"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+</LinearLayout>

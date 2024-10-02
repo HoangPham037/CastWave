@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mainAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/mainCollapsing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/grey_02"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/mainBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iv_cover"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_category" />
+
+            <Toolbar
+                android:id="@+id/mainToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_54dp"
+                android:navigationIcon="@drawable/ic_back_circle"
+                app:layout_collapseMode="pin">
+
+                <com.castwave.castwave.customview.TextCastWaveBold
+                    android:id="@+id/tvTitleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sp"
+                    tools:text="7 ngày rèn luyện sự tập trung" />
+
+            </Toolbar>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:elevation="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <com.castwave.castwave.customview.TextCastWaveBold
+                    android:id="@+id/tvVipCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_radius_24dp"
+                    android:paddingHorizontal="@dimen/_12dp"
+                    android:paddingVertical="@dimen/_8dp"
+                    android:text="MIỄN PHÍ"
+                    android:textColor="@color/grey_01" />
+
+                <com.castwave.castwave.customview.TextCastWaveBold
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:maxLines="1"
+                    android:text="Người cung trăng - Những vệ thần tuổi thơ"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sp"
+                    app:layout_constraintBottom_toTopOf="@id/tvNameAuthor"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.castwave.castwave.customview.TextCastWaveRegular
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:text="Truyện thiếu nhi"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvRatio"
+                    app:layout_constraintEnd_toStartOf="@id/tvRatio" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_5dp">
+
+
+                    <com.castwave.castwave.customview.TextCastWaveBold
+                        android:id="@+id/tvListening"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8dp"
+                        android:background="@drawable/bgr_info_user_doscovery"
+                        android:drawableStart="@drawable/ic_pause_40dp"
+                        android:drawablePadding="@dimen/_8dp"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_4dp"
+                        android:paddingEnd="@dimen/_12dp"
+                        android:text="@string/txt_start_listening"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_0_1dp"
+                        android:layout_weight="1" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivFavourite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_oval"
+                        android:padding="@dimen/_12dp"
+                        android:src="@drawable/ic_favourite_false" />
+
+                </TableRow>
+            </LinearLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_01"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_16dp">
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_time"
+                android:drawablePadding="@dimen/_5dp"
+                android:gravity="center"
+                android:text="20 phút"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_14sp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_20dp">
+
+                <com.castwave.castwave.customview.TextCastWaveBold
+                    android:id="@+id/tvDownload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radius_24dp"
+                    android:backgroundTint="@color/grey_02"
+                    android:drawableStart="@drawable/ic_download"
+                    android:drawablePadding="@dimen/_5dp"
+                    android:gravity="top"
+                    android:paddingHorizontal="@dimen/_35dp"
+                    android:paddingVertical="@dimen/_10dp"
+                    android:text="Tải về máy"
+                    android:textColor="@color/grey_04"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.castwave.castwave.customview.TextCastWaveBold
+                    android:id="@+id/tvAddLibrary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radius_24dp"
+                    android:backgroundTint="@color/grey_02"
+                    android:drawableStart="@drawable/ic_add_library"
+                    android:drawablePadding="@dimen/_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:paddingVertical="@dimen/_10dp"
+                    android:text="Thêm vào thư viện"
+                    android:textColor="@color/grey_04"
+                    android:textSize="@dimen/_14sp" />
+            </TableRow>
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_16dp"
+                android:text="Giới thiệu nội dung"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_18sp" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:lineSpacingExtra="@dimen/_5dp"
+                android:maxLines="6"
+                android:text="Hoàng tử bé được coi là một trong những tác phẩm văn học thơ mộng, ngây thơ và trong sáng nhất mọi thời đại. Đến nay, tác phẩm này được nhà văn Saint-Exupéry xuất bản năm 1943 đã được dịch ra hơn 300 thứ tiếng và bán được hơn 200 triệu bản trên toàn thế giới..."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:drawableEnd="@drawable/ic_level_show_chapter"
+                android:drawablePadding="@dimen/_6dp"
+                android:paddingVertical="@dimen/_10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                tools:text="@string/txt_see_more" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

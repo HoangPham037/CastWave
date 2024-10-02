@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_12dp"
+    android:background="@drawable/bg_radius_12"
+    android:orientation="vertical"
+    android:padding="@dimen/_8dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="@dimen/_68dp"
+            android:layout_height="@dimen/_68dp"
+            android:id="@+id/ivCoverPhoto"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iv_cover"
+            app:round="@dimen/_8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8dp"
+            android:orientation="vertical">
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01 tháng 8"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Vượt qua nỗi sợ đánh giá"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp" />
+        </LinearLayout>
+    </TableRow>
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Có bao giờ chỉ từ một câu hỏi,bạn gợi lên được rất nhiều suy nghĩ? Trong nội dung lần này, mình sẽ chia sẻ cho bạn..."
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddPodcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_add_podcast_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_download" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvTotalTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_pause_32dp"
+            android:drawablePadding="@dimen/_8dp"
+            android:gravity="end|center_vertical"
+            android:text="15 phút"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sp" />
+    </TableRow>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_16dp">
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_latest"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_most_popular"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvOldest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_oldest"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+</LinearLayout>

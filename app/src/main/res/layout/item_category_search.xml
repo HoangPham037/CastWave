@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="155dp"
+    android:layout_height="100dp"
+    android:layout_margin="7dp"
+    android:background="@drawable/bgr_item_pod_course">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBgr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/bgr_cut_circle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/noto_lotus" />
+
+      <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvTitleCategorySearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_04"
+          android:layout_marginEnd="@dimen/_16dp"
+          android:layout_marginTop="@dimen/_12dp"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SACH NOI" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

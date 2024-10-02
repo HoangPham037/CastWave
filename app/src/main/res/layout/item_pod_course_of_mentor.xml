@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/bgr_item_pod_course"
+    android:padding="8dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgPodCourse"
+        android:layout_width="76dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_test"
+        app:layout_constraintDimensionRatio="H, 76: 109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8dp" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPodCourse"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvNamePodCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:text="Xử lý khủng hoảng truyền thông khung hoang truyen thong khung hoang truyen" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvNameAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignTop="@+id/tvGoDetails"
+            android:layout_alignBottom="@+id/tvGoDetails"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            android:layout_toStartOf="@+id/tvGoDetails"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="Michael Field" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvGoDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNamePodCourse"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bgr_grey01_40dp"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_8dp"
+            android:text="@string/txt_detail"
+            android:textColor="@color/grey_04"
+            android:textSize="@dimen/_12sp" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:elevation="@dimen/_5dp"
+        android:padding="@dimen/_5dp"
+        android:src="@drawable/ic_back_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bgTimer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_choose_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_category"
+        app:layout_constraintBottom_toBottomOf="@id/bgTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:text="@string/txt_set_timer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sp"
+        app:layout_constraintBottom_toTopOf="@id/tvChooseTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvChooseTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:text="@string/txt_choose_time"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintBottom_toBottomOf="@id/bgTimer"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableRow
+        android:id="@+id/tbTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:background="@drawable/bg_radius_12"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChooseTime">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:text="@string/txt_total_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/_15sp"
+            android:id="@+id/tvTotalTimer"
+            android:text="@string/txt_5_minute" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tbBellSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:background="@drawable/bg_radius_12"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbTime">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_bell_sound"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:text="@string/txt_sound_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/_15sp"
+            android:id="@+id/tvBellSound"
+            android:text="@string/txt_no" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tbBackgroundSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:background="@drawable/bg_radius_12"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbBellSound">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_background_sound"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:text="@string/txt_content_background_sound"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:id="@+id/tvBackgroundSound"
+            android:textSize="@dimen/_15sp"
+            android:text="@string/txt_no" />
+    </TableRow>
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvStartTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_25dp"
+        android:background="@drawable/bg_radius_8dp_purple_01"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:text="@string/txt_start_timer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbBackgroundSound" />
+</androidx.constraintlayout.widget.ConstraintLayout>

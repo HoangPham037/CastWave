@@ -1,0 +1,51 @@
+<resources>
+    <style name="Base.Theme.CastWave" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="Theme.CastWave" parent="Base.Theme.CastWave">
+        <item name="android:navigationBarColor">@color/grey_01</item>
+        <item name="android:navigationIcon">@android:color/white</item>
+    </style>
+    <style name="CustomDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#CC8800</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ExpandedTitle" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="CollapsedTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="NumberPickerTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="DialogFeelingAnimationStyle">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom_fragment</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom_fragment</item>
+        <item name="android:navigationBarColor">@android:color/background_dark</item>
+        <item name="android:navigationIcon">@android:color/white</item>
+    </style>
+
+    <style name="DialogBlackBase" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/background_dark</item>
+        <item name="android:navigationIcon">@android:color/white</item>
+    </style>
+    <style name="DialogFullScreen" parent="DialogBlackBase">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/DialogFeelingAnimationStyle</item>
+        <item name="android:navigationBarColor">@android:color/background_dark</item>
+        <item name="android:navigationIcon">@android:color/white</item>
+    </style>
+    <style name="ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:displayOptions">homeAsUp</item>
+    </style>
+
+</resources>

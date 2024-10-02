@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/ivBackGround"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100dp"
+            android:background="@drawable/bg_category"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackGround"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:padding="@dimen/_5dp"
+            android:src="@drawable/ic_back_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5dp"
+            android:src="@drawable/ic_setting"
+            app:layout_constraintBottom_toBottomOf="@id/ivClose"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivClose" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginStart="@dimen/_10dp"
+            android:elevation="@dimen/_5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivClose"
+            tools:ignore="ContentDescription"
+            android:src="@drawable/iv_avatar" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:elevation="@dimen/_5dp"
+            android:textColor="@color/green_02"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintStart_toEndOf="@id/ivAvatar"
+            app:layout_constraintTop_toTopOf="@id/ivAvatar"
+            android:text="Chiếc Lá Khô" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:textColor="@color/grey_04"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            android:text="ID: 012345" />
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_email"
+            android:backgroundTint="#802A2849"
+            android:elevation="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:padding="@dimen/_4dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivAvatar"
+            tools:ignore="ContentDescription" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvListeningLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:text="@string/txt_listening_level"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBackGround" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintListeningLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/bg_radius_16dp"
+            android:padding="@dimen/_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvListeningLevel">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_level"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2dp"
+                android:text="LEVEL 2"
+                android:textColor="@color/grey_02"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivLevel"
+                app:layout_constraintEnd_toEndOf="@id/ivLevel"
+                app:layout_constraintStart_toStartOf="@id/ivLevel" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:progress="10"
+                android:progressDrawable="@drawable/custom_progressbar"
+                app:layout_constraintEnd_toStartOf="@id/tvPercent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivLevel" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4%"
+                android:textColor="@color/grey_04"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvHeardNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:gravity="center"
+                android:text="@string/txt_heard_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toStartOf="@id/view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1.5dp"
+                android:layout_height="@dimen/_40dp"
+                android:background="@color/grey_01"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvPurchasedContent"
+                app:layout_constraintStart_toEndOf="@id/tvHeardNow" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvPurchasedContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/txt_purchased_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvHeardNow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/tvHeardNow" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvTotalHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:text="01"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="@id/tvHeardNow"
+                app:layout_constraintStart_toStartOf="@id/tvHeardNow"
+                app:layout_constraintTop_toBottomOf="@id/tvHeardNow" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvTotalPurchased"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:text="01"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="@id/tvPurchasedContent"
+                app:layout_constraintStart_toStartOf="@id/tvPurchasedContent"
+                app:layout_constraintTop_toBottomOf="@id/tvPurchasedContent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvTotalBadge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_16dp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center_vertical"
+            android:text="HUY HIỆU (0)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintListeningLevel" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintBadge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/bg_radius_16dp"
+            android:padding="@dimen/_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalBadge">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_level_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvLevelBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2dp"
+                android:text=""
+                android:textColor="@color/grey_02"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivBadge"
+                app:layout_constraintEnd_toEndOf="@id/ivBadge"
+                app:layout_constraintStart_toStartOf="@id/ivBadge" />
+
+
+            <com.castwave.castwave.customview.TextCastWaveBold
+                android:id="@+id/tvNameBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="Bronze cup"
+                android:textColor="@color/grey_04"
+                android:visibility="invisible"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLevelBadge" />
+
+            <com.castwave.castwave.customview.TextCastWaveRegular
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:gravity="center"
+                android:text="Bạn chưa có huy hiệu nào"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNameBadge" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

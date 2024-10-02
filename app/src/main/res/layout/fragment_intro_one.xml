@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/txt_hello"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="@string/txt_choose_topic"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_15sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvTopic"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_25dp"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_topic" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_25dp"
+        android:background="@drawable/bg_radius_8dp_purple_01"
+        android:backgroundTint="@color/grey_02"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:text="@string/txt_continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp" />
+</LinearLayout>

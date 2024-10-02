@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_16dp">
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvListen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_listen"
+        android:drawablePadding="@dimen/_8dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_listen_now"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_info_popup"
+        android:drawablePadding="@dimen/_8dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_watch_content"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_download"
+        android:drawablePadding="@dimen/_8dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_download"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:id="@+id/tvRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_remove"
+        android:drawablePadding="@dimen/_8dp"
+        android:paddingVertical="@dimen/_10dp"
+        android:text="@string/txt_remove_library"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_14sp" />
+</LinearLayout>

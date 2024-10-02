@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_01">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_16dp">
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="@string/txt_new_reviews_book"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/ivCoverPhoto"
+            android:layout_width="@dimen/_140dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iv_cover"
+            app:layout_constraintBottom_toTopOf="@id/tvContent"
+            app:layout_constraintDimensionRatio="W , 2:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:round="@dimen/_12dp" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:text="@string/txt_content_evaluate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toTopOf="@id/tvReadingVoice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivCoverPhoto" />
+
+        <RatingBar
+            android:id="@+id/ratingBarContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40dp"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="@color/yellow"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            app:layout_constraintBottom_toBottomOf="@id/tvContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvContent"
+            tools:rating="4.7" />
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvReadingVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:text="@string/txt_reading_voice"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toTopOf="@id/rcvReviewsTitle"
+            app:layout_constraintStart_toStartOf="@id/tvContent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+
+        <RatingBar
+            android:id="@+id/ratingBarVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="@color/yellow"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            app:layout_constraintBottom_toBottomOf="@id/tvReadingVoice"
+            app:layout_constraintStart_toStartOf="@id/ratingBarContent"
+            app:layout_constraintTop_toTopOf="@id/tvReadingVoice"
+            tools:rating="1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvReviewsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReadingVoice"
+            app:spanCount="2"
+            tools:listitem="@layout/item_topic_common" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150dp"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="@drawable/bg_width_1_radius_16dp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10dp"
+            app:layout_constraintBottom_toTopOf="@id/tvSendReviews"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcvReviewsTitle">
+
+            <TableRow
+                android:id="@+id/tbTextSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:visibility="gone">
+
+                <com.castwave.castwave.customview.TextCastWaveRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_content_evaluate"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sp" />
+
+                <com.castwave.castwave.customview.TextCastWaveRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sp"
+                    android:id="@+id/tvTotalReview"
+                    tools:text="16/ 2500" />
+            </TableRow>
+
+            <EditText
+                android:id="@+id/edtComment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/txt_write_reviews"
+                android:elevation="@dimen/_5dp"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                tools:ignore="Autofill" />
+        </LinearLayout>
+
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvSendReviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="@drawable/bg_radius_8dp_purple_01"
+            android:gravity="center"
+            android:padding="@dimen/_16dp"
+            android:text="@string/txt_send_reviews"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toTopOf="@id/tvNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:paddingVertical="@dimen/_10dp"
+            android:text="@string/txt_note_when_evaluating"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSendReviews" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_9_5dp"
+    android:layout_marginTop="@dimen/_16dp"
+    android:background="@drawable/bg_radius_12_8dp"
+    android:paddingHorizontal="@dimen/_7dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/ivCoverPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_7dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/tvVipCard"
+        app:layout_constraintDimensionRatio="W ,148:202"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round="@dimen/_8dp"
+        android:src="@drawable/img_test" />
+
+
+    <TextView
+        android:id="@+id/tvVipCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:paddingVertical="@dimen/_15dp"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCoverPhoto"
+        tool:text="1 THẺ CASTWAVE"
+        tool:textColor="@color/yellow" />
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_more"
+        app:layout_constraintBottom_toBottomOf="@id/tvVipCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvVipCard"
+        tool:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

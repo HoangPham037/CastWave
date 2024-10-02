@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_radius_top_12dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_16dp">
+
+    <View
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_4dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/_12dp"
+        android:background="@drawable/bg_radius_16dp" />
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/tvAllEvaluate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        tools:text="Tất cả đánh giá (115)"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvEvaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_evaluate" />
+</LinearLayout>

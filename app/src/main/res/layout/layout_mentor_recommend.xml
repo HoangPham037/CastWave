@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_16dp"
+    android:id="@+id/layoutItem"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginEnd="@dimen/_12dp"
+    android:background="@drawable/bgr_mentor_recommend"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="191dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="191:243"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="@dimen/_80dp"
+            android:layout_height="@dimen/_80dp"
+            android:src="@drawable/img_test" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvNameMentor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="Pham Van Hoang"
+            android:textColor="@color/purple_02"
+            android:textSize="@dimen/_15sp" />
+
+
+        <com.castwave.castwave.customview.TextCastWaveRegular
+            android:id="@+id/tvDescMentor"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:text="Chủ tịch, CEO, Tập đoàn Le Group"
+            android:textColor="@color/purple_02"
+            android:textSize="@dimen/_15sp" />
+
+        <com.castwave.castwave.customview.TextCastWaveBold
+            android:id="@+id/tvPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgr_grey01_40dp"
+            android:drawableStart="@drawable/ic_start_audio"
+            android:drawablePadding="@dimen/_8dp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_5dp"
+            android:paddingStart="@dimen/_5dp"
+            android:paddingEnd="@dimen/_12dp"
+            android:text="@string/txt_watch_trailer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

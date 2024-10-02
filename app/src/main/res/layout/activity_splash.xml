@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_02"
+    tools:context=".ui.activity.SplashActivity">
+
+
+    <com.castwave.castwave.customview.TextCastWaveBold
+        android:id="@+id/textCastWaveBold2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_grey01_40dp"
+        android:padding="@dimen/_12dp"
+        android:text="CastWave"
+        android:textColor="@color/grey_04"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.castwave.castwave.customview.TextCastWaveRegular
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="SmartWave Company"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textCastWaveBold2"
+        app:layout_constraintStart_toStartOf="@+id/textCastWaveBold2"
+        app:layout_constraintTop_toBottomOf="@+id/textCastWaveBold2" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
